@@ -1,6 +1,6 @@
 # fen2svg
 
-
+Todo:
 - Replace the font with an openfont
 - Pull out magic vars and uppercase all of them
 - Pieces on the cheese board should be able to be moved
