@@ -5,29 +5,40 @@
     <title>FEN2SVG</title>
     <h1>Convert FEN to SVG</h1>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
+            align-items: center; /* Center content vertically */
             flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
         }
         #svgContainer {
-            width: 80%;
-            max-width: 800px;
+            width: 80vw; /* Adjust based on your needs */
+            height: 80vh; /* Adjust to maintain aspect ratio and fit within the viewport */
+            max-width: 800px; /* Maximum width */
+            max-height: 800px; /* Maximum height, adjust to maintain aspect ratio */
+            overflow: hidden; /* Prevent scrolling within the container */
         }
         #svgContainer svg {
-            width: 100%; 
-            height: auto;
+            display: block; /* Remove extra space below SVG */
+            width: 100%; /* Full container width */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
     <script src="script.js"></script>
 </head>
 <body>
     <div id="svgContainer"></div>
-    <input type="text" id="fenInput" size="59" value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
+    <input type="text" id="fenInput" size="60" value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
     <button onclick="fenToSvg()">Convert FEN to SVG</button>
     <button onclick="downloadSvg()">Download as SVG</button>
+    
+    <footer>Built by <a href="https://ramvasuthevan.ca/">Ram Vasuthevan</a> with ❤️ on the shoulders of giants</footer>
 </body>
 </html>
