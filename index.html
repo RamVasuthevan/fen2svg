@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FEN2SVG</title>
+    <h1>Convert FEN to SVG</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #svgContainer {
+            width: 80%;
+            max-width: 800px;
+        }
+        #svgContainer svg {
+            width: 100%; 
+            height: auto;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="svgContainer"></div>
+    <input type="text" id="fenInput" size="59" value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
+    <button onclick="fenToSvg()">Convert FEN to SVG</button>
+    <button onclick="downloadSvg()">Download as SVG</button>
+</body>
+</html>
